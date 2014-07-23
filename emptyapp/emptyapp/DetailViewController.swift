@@ -10,10 +10,20 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet var nView: UITextView = UITextView()
+    @IBOutlet var titleField: UITextField = UITextField()
+    
+    
+    var todoData = NSDictionary()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        println("Detail View Loaded")
+        titleField.userInteractionEnabled = false
+        nView.userInteractionEnabled = false
+        
+        titleField.text = todoData.objectForKey("ItemTitle") as String
+        nView.text = todoData.objectForKey("ItemNote") as String
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +32,20 @@ class DetailViewController: UIViewController {
     }
     
 
+    @IBAction func deleteItem(sender: AnyObject) {
+        var userDefaults = NSUserDefaults.standardUserDefaults()
+        var itemListArray = userDefaults.objectForKey("ItemList") as NSMutableArray
+        var tempArray :NSMutableArray = NSMutableArray()
+        
+        for dict in itemListArray{
+            tempArray.addObject(dict as NSDictionary)
+        }
+        tempArray.removeObject(todoData)
+        userDefaults.removeObjectForKey("ItemList")
+        userDefaults.setObject(tempArray, forKey: "ItemList")
+        userDefaults.synchronize()
+        navigationController.popToRootViewControllerAnimated(true)
+    }
     /*
     // #pragma mark - Navigation
 

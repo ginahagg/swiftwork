@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  emptyapp
+//  kegii
 //
-//  Created by Gina Hagg on 7/18/14.
-//
+//  Created by Gina Hagg on 7/21/14.
+//  Copyright (c) 2014 Gina Hagg. All rights reserved.
 //
 
 import UIKit
@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().barTintColor = UIColor.orangeColor()
         return true
     }
 

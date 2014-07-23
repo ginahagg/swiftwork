@@ -10,9 +10,10 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    
     @IBOutlet var TitleTextField: UITextField = UITextField()
     
-    @IBOutlet var NotesTextView: UITextView = UITextView()
+    @IBOutlet var notesView: UITextView = UITextView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +31,11 @@ class AddViewController: UIViewController {
         var userDefaults = NSUserDefaults.standardUserDefaults()
         var itemList:NSMutableArray? = userDefaults.objectForKey("ItemList") as? NSMutableArray
         var dataset = NSMutableDictionary()
+        println(TitleTextField.text)
+        println(notesView.text)
         dataset.setObject(TitleTextField.text , forKey: "ItemTitle")
         
-        dataset.setObject(NotesTextView.text, forKey: "ItemNote")
+        dataset.setObject(notesView.text, forKey: "ItemNote")
         
         if (itemList){
             var newMutableList:NSMutableArray? = NSMutableArray()
