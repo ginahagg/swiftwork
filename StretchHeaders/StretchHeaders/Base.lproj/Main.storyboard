@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XJw-Q6-Nzo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gUl-li-1AA">
+            <objects>
+                <tableViewController id="XJw-Q6-Nzo" customClass="ViewController" customModule="StretchHeaders" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="xDE-jY-GJM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="YEZ-ST-4ve">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-header.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wyI-rO-GxP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="September 24" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4D-Rg-faM">
+                                    <rect key="frame" x="56" y="39" width="191" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6ok-yY-3pC" customClass="NewsItemCell" customModule="StretchHeaders" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6ok-yY-3pC" id="vES-qs-F5b">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entertainment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDa-mF-i5P">
+                                            <rect key="frame" x="8" y="8" width="108" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="9fd-la-v9p"/>
+                                                <constraint firstAttribute="width" constant="108" id="zdW-iV-xRh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                            <color key="textColor" red="0.58737562759999995" green="0.022704387310000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dysoptian movies continue to rule over box office with 'Maze Runner'. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-E2-qfC">
+                                            <rect key="frame" x="8" y="24" width="390" height="13"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="390" id="5wz-x3-xsJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sva-E2-qfC" firstAttribute="top" secondItem="fDa-mF-i5P" secondAttribute="bottom" id="D3p-5G-Klk"/>
+                                        <constraint firstItem="fDa-mF-i5P" firstAttribute="leading" secondItem="vES-qs-F5b" secondAttribute="leadingMargin" id="Ofh-hv-EWa"/>
+                                        <constraint firstItem="Sva-E2-qfC" firstAttribute="leading" secondItem="fDa-mF-i5P" secondAttribute="leading" id="P2Z-04-HG5"/>
+                                        <constraint firstItem="fDa-mF-i5P" firstAttribute="top" secondItem="vES-qs-F5b" secondAttribute="topMargin" id="wAk-q2-Fn7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="fDa-mF-i5P" id="mZP-by-acD"/>
+                                    <outlet property="summaryLabel" destination="Sva-E2-qfC" id="oMg-FS-zcg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XJw-Q6-Nzo" id="5OE-tq-gZu"/>
+                            <outlet property="delegate" destination="XJw-Q6-Nzo" id="GK5-YF-aab"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90l-3L-ee3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-header.jpg" width="1242" height="825"/>
+    </resources>
+</document>
